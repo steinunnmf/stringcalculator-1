@@ -58,5 +58,10 @@ public class CalculatorTest {
 	public void testNegatives2() {
 	    Calculator.add("//;\n-1;-2;3");
 	}
+	
+	@Test
+	public void testLargeNumber() {
+		assertEquals(2, Calculator.add("1001,2"));
+	}
 
 }

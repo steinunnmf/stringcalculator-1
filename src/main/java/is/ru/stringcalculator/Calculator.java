@@ -77,8 +77,11 @@ public class Calculator {
     private static int sum(String[] numbers){
     	int total = 0;
         for(String number : numbers){
-		    total += toInt(number);
-		}
+        	if (toInt(number) < 1001)
+        	{
+        		total += toInt(number);
+        	}
+        }
 		return total;
     }
 }
